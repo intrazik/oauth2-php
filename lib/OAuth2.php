@@ -619,7 +619,7 @@ class OAuth2
         }
 
 
-        if (!preg_match('/' . preg_quote(self::TOKEN_BEARER_HEADER_NAME, '/') . '\s(\S+)/', $header, $matches)) {
+        if (!preg_match('/' . preg_quote(self::TOKEN_BEARER_HEADER_NAME, '/') . '\s(\S+)/i', $header, $matches)) {
             return null;
         }
 
